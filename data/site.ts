@@ -58,14 +58,24 @@ export const navLinks = [
   { label: "Contact Me", href: "#contact" },
 ] as const;
 
+// export const heroContent = {
+//   eyebrow: "Hello, I'm Ahsan",
+//   headingLine1: "Ahsan",
+//   headingLine2: "Iqbal",
+//   subtitle: "Full-Stack & AI Developer",
+//   description:
+//     "I turn ambitious ideas into products people trust — scalable web, SaaS, mobile & AI solutions built to launch fast and grow without limits.",
+//   image: "/images/profile.jpg",
+// };
+
 export const heroContent = {
-  eyebrow: "Hello, I'm Ahsan",
+  eyebrow: "Hi, my name is",
   headingLine1: "Ahsan",
   headingLine2: "Iqbal",
   subtitle: "Full-Stack & AI Developer",
   description:
     "I turn ambitious ideas into products people trust — scalable web, SaaS, mobile & AI solutions built to launch fast and grow without limits.",
-  image: "/images/profile.jpg",
+  image: "/images/hero.jpg",
 };
 
 export const services = [
@@ -114,8 +124,10 @@ export const services = [
 ] as const;
 
 export const stats = [
-  { value: 50, suffix: "+", label: "Projects & Builds" },
-  { value: 30, suffix: "+", label: "Happy Clients" },
+  // { value: 50, suffix: "+", label: "Projects & Builds" },
+  // { value: 30, suffix: "+", label: "Happy Clients" },
+  { value: 300, suffix: "+", label: "Projects & Builds" },
+  { value: 300, suffix: "+", label: "Happy Clients" },
   { value: 20, suffix: "+", label: "Technologies" },
   { value: 5, suffix: "+", label: "Years Learning & Building" },
 ] as const;

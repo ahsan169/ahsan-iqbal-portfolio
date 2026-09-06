@@ -4,7 +4,7 @@
 
 :root {
   /* Core palette — change these to re-theme the whole site */
-  --color-bg: #0a0908;
+  /* --color-bg: #0a0908;
   --color-bg-elevated: #121110;
   --color-bg-card: #161514;
   --color-border: rgba(255, 255, 255, 0.08);
@@ -12,7 +12,17 @@
   --color-text-muted: #8c8983;
   --color-accent: #ff5a1f;
   --color-accent-hover: #ff7440;
-  --color-accent-text: #0a0908;
+  --color-accent-text: #0a0908; */
+
+   --color-bg: #0b0908;
+  --color-bg-elevated: #151210;
+  --color-bg-card: #1a1614;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-text: #f7f4ee;
+  --color-text-muted: #9a958c;
+  --color-accent: #ff6a2b;
+  --color-accent-hover: #ff8a4d;
+  --color-accent-text: #120a06;
 
   /* Glass surface tokens — used for the frosted-glass card treatment */
   --color-glass: rgba(255, 255, 255, 0.045);

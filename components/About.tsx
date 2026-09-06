@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+// import { Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { aboutContent } from "@/data/site";
 import SectionHeading from "./SectionHeading";
+import { section } from "framer-motion/m";
 
 export default function About() {
   return (
@@ -14,7 +16,7 @@ export default function About() {
         aria-hidden="true"
       />
 
-      <div className="section-container relative grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+      {/* <div className="section-container relative grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
           <SectionHeading number="02" title="About Me" />
 
@@ -37,7 +39,30 @@ export default function About() {
           </motion.div>
         </div>
 
-        <div>
+        <div> */}
+        <div className="section-container relative">
+        <SectionHeading number="02" title="About Me" />
+
+        <div className="mt-10 grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <motion.div
+            initial={{ opacity: 0, y: 24, rotateX: 6 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            style={{ transformStyle: "preserve-3d" }}
+            className="glass-card relative aspect-[4/5] w-full max-w-xs overflow-hidden rounded-card"
+          >
+            <Image
+              src={aboutContent.photo}
+              alt="Portrait of Ahsan Iqbal"
+              fill
+              sizes="(min-width: 1024px) 20vw, 60vw"
+              className="object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent" />
+          </motion.div>
+
+          <div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,8 +96,11 @@ export default function About() {
                 key={skill}
                 className="glass-card flex items-center gap-3 rounded-xl px-4 py-3.5"
               >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                {/* <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
                   <Check size={14} />
+                </span> */}
+                 <span className="flex h-6 w-6 shrink-0 items-center justify-center text-accent">
+                  <ArrowUpRight size={18} strokeWidth={2.5} />
                 </span>
                 <span className="text-sm text-text">{skill}</span>
               </div>
@@ -95,6 +123,8 @@ export default function About() {
           </motion.div>
         </div>
       </div>
+      </div>
     </section>
+       
   );
 }

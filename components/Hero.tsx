@@ -105,7 +105,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -121,6 +121,32 @@ export default function Hero() {
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg via-bg/10 to-transparent" />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent" />
+        </motion.div> */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="relative order-1 mx-auto aspect-[4/5] w-full max-w-md lg:order-2 lg:max-w-none"
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              WebkitMaskImage:
+                "radial-gradient(ellipse 70% 75% at 50% 38%, black 50%, transparent 100%)",
+              maskImage:
+                "radial-gradient(ellipse 70% 75% at 50% 38%, black 50%, transparent 100%)",
+            }}
+          >
+            <Image
+              src={heroContent.image}
+              alt="Portrait of Ahsan Iqbal"
+              fill
+              priority
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-bg to-transparent" />
         </motion.div>
       </div>
     </section>

@@ -50,19 +50,23 @@ export default function Services() {
                 className="glass-card group relative flex min-h-[240px] flex-col justify-between overflow-hidden rounded-card p-7 transition-all duration-300 ease-smooth hover:-translate-y-1.5 hover:border-accent hover:bg-accent"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-sm font-semibold text-muted transition-colors duration-300 group-hover:text-accent-text/70">
-                    {service.number}
+                  {/* <span className="font-display text-sm font-semibold text-muted transition-colors duration-300 group-hover:text-accent-text/70"> */}
+                  <span className="font-display text-sm font-semibold text-muted transition-colors duration-300 group-hover:text-white/70">
+                   {service.number}
                   </span>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 text-accent transition-all duration-300 group-hover:rotate-6 group-hover:bg-accent-text/15 group-hover:text-accent-text">
+                  {/* <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 text-accent transition-all duration-300 group-hover:rotate-6 group-hover:bg-accent-text/15 group-hover:text-accent-text"> */}
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 text-accent transition-all duration-300 group-hover:rotate-6 group-hover:bg-white/15 group-hover:text-white">
                     <Icon size={20} />
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="mb-2 font-display text-xl font-semibold text-text transition-colors duration-300 group-hover:text-accent-text">
+                  {/* <h3 className="mb-2 font-display text-xl font-semibold text-text transition-colors duration-300 group-hover:text-accent-text"> */}
+                  <h3 className="mb-2 font-display text-xl font-semibold text-text transition-colors duration-300 group-hover:text-white">
                     {service.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-muted transition-colors duration-300 group-hover:text-accent-text/80">
+                  {/* <p className="text-sm leading-relaxed text-muted transition-colors duration-300 group-hover:text-accent-text/80"> */}
+                   <p className="text-sm leading-relaxed text-muted transition-colors duration-300 group-hover:text-white/80">
                     {service.description}
                   </p>
                 </div>

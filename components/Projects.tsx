@@ -48,7 +48,7 @@ export default function Projects() {
               style={{ transformStyle: "preserve-3d" }}
               className="glass-card glass-card-hover group overflow-hidden rounded-card"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              {/* <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src={project.image}
                   alt={`${project.title} preview`}
@@ -57,6 +57,15 @@ export default function Projects() {
                   className="object-cover transition-transform duration-500 ease-smooth group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              </div> */}
+               <div className="relative aspect-[4/3] overflow-hidden bg-black/30">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-contain p-3 transition-transform duration-500 ease-smooth group-hover:scale-105"
+                />
               </div>
 
               <div className="p-5">
