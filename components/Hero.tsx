@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
@@ -31,7 +32,57 @@ const item = {
   },
 };
 
+function useTypewriter(words: readonly string[]) {
+  const [text, setText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const reducedMotion = useRef(false);
+
+  useEffect(() => {
+    reducedMotion.current = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (reducedMotion.current) {
+      setText(words[0]);
+    }
+  }, [words]);
+
+  useEffect(() => {
+    if (reducedMotion.current) return;
+
+    const word = words[wordIndex % words.length];
+    let delay = 0;
+
+    if (!isDeleting && text === word) {
+      delay = 1600;
+    } else if (isDeleting && text === "") {
+      delay = 300;
+    } else {
+      delay = isDeleting ? 35 : 75;
+    }
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting && text === word) {
+        setIsDeleting(true);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setWordIndex((index) => (index + 1) % words.length);
+      } else {
+        setText(
+          isDeleting ? word.slice(0, text.length - 1) : word.slice(0, text.length + 1)
+        );
+      }
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [words, text, isDeleting, wordIndex]);
+
+  return text;
+}
+
 export default function Hero() {
+  const typedText = useTypewriter(heroContent.roles);
+
   return (
     <section
       id="home"
@@ -68,9 +119,16 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="mt-6 max-w-md font-body text-lg font-medium text-muted"
+            className="mt-6 flex h-9 items-center font-body text-xl font-semibold text-accent sm:text-2xl"
+            aria-label={heroContent.roles.join(", ")}
           >
-            {heroContent.subtitle}
+            <span aria-hidden="true">{typedText}</span>
+            <motion.span
+              aria-hidden="true"
+              className="ml-1 inline-block h-[1.1em] w-[3px] bg-accent"
+              animate={{ opacity: [1, 0] }}
+              transition={{ repeat: Infinity, duration: 0.9, times: [0, 0.5] }}
+            />
           </motion.p>
 
           <motion.p

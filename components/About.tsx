@@ -10,7 +10,7 @@ import { section } from "framer-motion/m";
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden py-24 sm:py-32">
+    <section id="about" className="relative overflow-hidden py-16 sm:py-20">
       <div
         className="bg-glow -left-24 bottom-0 h-72 w-72 bg-accent/10"
         aria-hidden="true"

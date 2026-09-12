@@ -5,7 +5,7 @@ import { techCategories } from "@/data/site";
 
 export default function Technologies() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 24 }}

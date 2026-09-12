@@ -6,9 +6,9 @@ import SectionHeading from "./SectionHeading";
 
 export default function Process() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-20">
       <div className="section-container">
-        <SectionHeading number="04" title="How I Work" />
+        <SectionHeading number="05" title="How I Work" />
 
         <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {processSteps.map((step, index) => (

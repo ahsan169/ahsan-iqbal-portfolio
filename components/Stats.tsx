@@ -6,7 +6,7 @@ import AnimatedCounter from "./AnimatedCounter";
 
 export default function Stats() {
   return (
-    <section className="pb-24 sm:pb-32">
+    <section className="pb-16 sm:pb-20">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

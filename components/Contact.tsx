@@ -26,14 +26,14 @@ export default function Contact() {
   const github = socialLinks.find((s) => s.icon === "github");
 
   return (
-    <section id="contact" className="relative overflow-hidden py-24 sm:py-32">
+    <section id="contact" className="relative overflow-hidden py-16 sm:py-20">
       <div
         className="bg-glow -right-24 bottom-0 h-80 w-80 bg-accent/10"
         aria-hidden="true"
       />
       <div className="section-container relative grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
-          <SectionHeading number="05" title={contactContent.heading} />
+          <SectionHeading number="06" title={contactContent.heading} />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

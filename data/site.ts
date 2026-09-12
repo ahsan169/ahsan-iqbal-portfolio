@@ -55,6 +55,7 @@ export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About Me", href: "#about" },
   { label: "Projects", href: "#projects" },
+  { label: "Reviews", href: "#testimonials" },
   { label: "Contact Me", href: "#contact" },
 ] as const;
 
@@ -72,7 +73,12 @@ export const heroContent = {
   eyebrow: "Hi, my name is",
   headingLine1: "Ahsan",
   headingLine2: "Iqbal",
-  subtitle: "Full-Stack & AI Developer",
+  roles: [
+    "Full-Stack Developer",
+    "AI Developer",
+    "SaaS Developer",
+    "Mobile App Developer",
+  ],
   description:
     "I turn ambitious ideas into products people trust — scalable web, SaaS, mobile & AI solutions built to launch fast and grow without limits.",
   image: "/images/hero.jpg",
@@ -305,3 +311,81 @@ export const contactContent = {
     "Other",
   ],
 };
+
+export const fiverr = {
+  gigUrl: "https://www.fiverr.com/s/Zomo4E4",
+  rating: 4.8,
+  reviewCount: 34,
+  fiveStarCount: 30,
+};
+
+export const testimonials = [
+  {
+    name: "digitalpomegran",
+    country: "United States",
+    countryCode: "us",
+    rating: 5,
+    duration: "3 weeks",
+    when: "1 year ago",
+    review:
+      "Well-written Python code and a full knowledge of WordPress. Well done, and we look forward to working with you again.",
+    avatar:
+      "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/2374747/original/logo_400.png",
+  },
+  {
+    name: "rajpilaka",
+    country: "United States",
+    countryCode: "us",
+    rating: 5,
+    duration: "1 day",
+    when: "11 months ago",
+    review:
+      "The work provided here had all the necessary detail and was delivered at a timely manner despite a last minute request by me. I highly recommend to anyone!",
+    avatar: "",
+  },
+  {
+    name: "abigailj1397",
+    country: "United Kingdom",
+    countryCode: "gb",
+    rating: 5,
+    duration: "3 days",
+    when: "1 year ago",
+    review:
+      "I am very happy with the quality Ahsan was able to deliver. He was very meticulous in understanding my needs and I appreciate his speed in delivery.",
+    avatar: "",
+  },
+  {
+    name: "mrsoftwareguy",
+    country: "United States",
+    countryCode: "us",
+    rating: 5,
+    duration: "3 days",
+    when: "1 year ago",
+    review:
+      "Ahsan is an expert and a great Fiverr. 3 others failed where he succeeded. If your project is challenging, Ahsan it the Fiverr you want.",
+    avatar:
+      "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/4b008f72bfd53c11828ebe7027d60d06-1650118418812/7e3f764e-865b-46f4-9d52-eeb22afc65d8.jpg",
+  },
+  {
+    name: "rapidforce1",
+    country: "United Kingdom",
+    countryCode: "gb",
+    rating: 5,
+    duration: "6 days",
+    when: "1 year ago",
+    review:
+      "Ahsan honestly exceeded expectations. We gave a very difficult coding task and he fully integrated what we needed on out website. Communication was extremely clear too.",
+    avatar: "",
+  },
+  {
+    name: "ezbez123",
+    country: "United States",
+    countryCode: "us",
+    rating: 5,
+    duration: "3 days",
+    when: "9 months ago",
+    review:
+      "Once again, Ahsan did exceptional work for me. He really is the best!",
+    avatar: "",
+  },
+] as const;

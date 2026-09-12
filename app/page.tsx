@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
 import Technologies from "@/components/Technologies";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
@@ -19,6 +20,7 @@ export default function Home() {
         <Stats />
         <About />
         <Projects />
+        <Testimonials />
         <Technologies />
         <Process />
         <Contact />

@@ -7,14 +7,14 @@ import { ArrowUpRight, Github, Plus } from "lucide-react";
 import { projects } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 
-const INITIAL_COUNT = 4;
+const INITIAL_COUNT = 6;
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projects : projects.slice(0, INITIAL_COUNT);
 
   return (
-    <section id="projects" className="relative overflow-hidden py-24 sm:py-32">
+    <section id="projects" className="relative overflow-hidden py-16 sm:py-20">
       <div
         className="bg-glow -right-24 top-24 h-80 w-80 bg-accent/10"
         aria-hidden="true"
@@ -26,7 +26,7 @@ export default function Projects() {
         </div>
 
         <div
-          className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 [perspective:1600px]"
+          className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 [perspective:1600px]"
         >
           {visibleProjects.map((project, index) => (
             <motion.article
@@ -36,7 +36,7 @@ export default function Projects() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{
                 duration: 0.5,
-                delay: (index % 4) * 0.06,
+                delay: (index % 3) * 0.06,
                 ease: [0.22, 1, 0.36, 1],
               }}
               whileHover={{
